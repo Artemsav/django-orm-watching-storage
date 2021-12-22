@@ -21,7 +21,6 @@ DATABASES = {
 INSTALLED_APPS = ['datacenter']
 
 DEBUG = env.bool("DEBUG", default=False)
-print(os.getenv('USER'))
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
