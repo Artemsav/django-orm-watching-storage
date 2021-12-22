@@ -20,11 +20,11 @@ DATABASES = {
 
 INSTALLED_APPS = ['datacenter']
 
-DEBUG = env.bool("DEBUG", default=False)
+DEBUG = env.bool('DEBUG', default=False)
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-ROOT_URLCONF = "project.urls"
+ROOT_URLCONF = 'project.urls'
 
 ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
 
