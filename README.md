@@ -12,7 +12,7 @@ python3 manage.py runserver [addrport]
 
 Starts a lightweight development web server on the local machine. By default, the server runs on port 8000 on the IP address 127.0.0.1. You can pass in an IP address and port number explicitly, more info on [Django docs](https://docs.djangoproject.com/en/4.0/ref/django-admin/)
 
-## Instalation
+## Installation
 
 Python3 should be already installed. Then use pip (or pip3, if there is a conflict with Python2) to install dependencies:
 
