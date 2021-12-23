@@ -1,12 +1,11 @@
 import os
-from dotenv import load_dotenv
-from pathlib import Path
+from dotenv import load_dotenv, find_dotenv
 from environs import Env
 
-env_path = Path('.', '.env')
-load_dotenv(dotenv_path=env_path,override=True)
+load_dotenv(find_dotenv(),override=True)
 env = Env()
 env.read_env()
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -26,7 +25,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
