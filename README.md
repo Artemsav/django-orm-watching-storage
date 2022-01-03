@@ -20,6 +20,15 @@ Python3 should be already installed. Then use pip (or pip3, if there is a confli
 pip install -r requirements.txt
 ```
 
+There is enviroment variables using in the application, you will need tp create .env file. A .env file is a text file containing key value pairs of all the environment variables required by the application. You can see example of it below:
+
+```# example of environment variables defined inside a .env file
+DATABASE_URL=postgres://USER:PASSWORD@HOST:PORT/NAME, more information you can find [here](https://github.com/jacobian/dj-database-url)
+DEBUG='False', more information you can find in Djago documentation
+SECRET_KEY='some string'
+ALLOWED_HOSTS='hosts' or default '*', more information you can find in Djago documentation
+```
+
 ## Project Goals
 
 The code is written for educational purposes on online-course for web-developers [Devman](https://dvmn.org)

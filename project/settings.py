@@ -1,12 +1,10 @@
 import os
-from dotenv import load_dotenv, find_dotenv
 from environs import Env
 import dj_database_url
 
-load_dotenv(find_dotenv(),override=True)
+
 env = Env()
 env.read_env()
-
 
 DATABASE_URL = os.getenv('DATABASE_URL')
 
